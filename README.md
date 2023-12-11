@@ -188,7 +188,7 @@ flowchart TB
 ```
 
 ### class diagram
-
+- class diagram
 ```mermaid
 classDiagram
 
