@@ -188,8 +188,9 @@ flowchart TB
 ```
 
 ### class diagram
+
 ```mermaid
-classDiagram 
+classDiagram
 
     class PaymentMethod {
         +String paymentMethodID
