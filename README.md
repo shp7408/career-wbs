@@ -354,4 +354,45 @@ payTimeoutRetryHistories ||--o{ Retry-Process : dohistories
 6. Timeout 재처리 실패시 메일 발송 모듈.<br>
 
 ## WBS
+1. 요구사항 분석 : 이미수행
+2. 설계 : 3d
+3. 일정산정: 1d
+4. Timeout 발생 시 Event발생 수정- SQS, SNS : 이미 사용하는 SQS가 있고 큐생성 및 기존코드 수정 : 2d
+5. Timeout event subscription module 작성 : SQS, SNS : 이미 사용하는 SQS가 있고 신규 class 생성 : 2d
+6. Timeout log table 설계, 생성 : 1d
+7. Timeout 재처리 service 설개, 구현 : 2d
+    1. transaction 성공여부 확인 : 0.5d
+    2. transaction 취소 처리 하기 (결제시) : 0.5d
+    3. 재처리 logging(DB) : 처리 횟수(3회), 처리 내역 : 1d
+8. Timeout 재처리 현황 조회 어드민 page.: 기존 admin에 메뉴 추가 : 5d
+9. Timeout 재처리 실패시 메일 발송 모듈: 기존 notification에 method 추가 : 1d
+
+```mermaid
+gantt
+    dateFormat  YYYY-MM-DD
+    title       결제 재처리 WBS
+    excludes    weekends, 2023-12-25, 2024-01-01
+    %% (`excludes` accepts specific dates in YYYY-MM-DD format, days of the week ("sunday") or "weekends", but not the word "weekdays".)
+
+    section prepare
+    요구사항분석                    :done,    des1, 2023-12-01, 10d
+    설계                            :active,  des2, 2023-12-11, 3d
+    일정산정                        :         des3, after des2, 1d
+    Timeout log table 설계, 생성    :       des4, 2023-12-27, 1d
+
+    section 기존 모듈 수정
+    Payment timeout event 발생          :crit, b1, 2024-01-03,2d
+    Cancel timeout용 cancel 추가        :crit, b2, 2024-01-10, 2d
+
+    section 신규 모듈 구현
+    Timeout event consumer 모듈작성    :c1, after b1, 2d
+    Queue 동작확인                      :milestone, after c1, 0d
+    Timeout service 구현                  :c2, after b2  , 2d
+    Timeout 재처리 현황 조회 어드민 개발    :c3, after c2  , 5d
+    Timeout 재처리 실패시 notification     : c4, after c3, 1d
+
+    section 테스트
+    Test & QA                           :after c4, 2d
+
+```
 
