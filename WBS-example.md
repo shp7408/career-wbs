@@ -342,7 +342,7 @@ payTimeoutRetryHistories ||--o{ Retry-Process : dohistories
 
 ```
 
-
+## Task List
 1. Timeout 발생 시 Event발생 수정- SQS, SNS <br>
 2. Timeout event subscription module 작성<br>
 3. Timeout log table 설계, 생성<br>
@@ -354,14 +354,5 @@ payTimeoutRetryHistories ||--o{ Retry-Process : dohistories
 6. Timeout 재처리 실패시 메일 발송 모듈.<br>
 
 
-
-일반적으로 요구사항 분석, 설계 기간이 추가 된다.
-관련 인프라가 없는 경우 인프라 구축기간이 추가된다. (infra 역활이 별도로 있을 경우 병렬로 진행) 
-Batch로 할경우 batch 설정 관련 일정 추가
-마일 스톤은 프로젝트 기간에 따라 추가되며 agile방식에서는 대부분 sprint 데모 형식으로 대응한다.
-
-
-
-민감한 모듈의 경우 검증 기간을 둔다.(혹은 Strangler pattern으로 병렬 운영 하면서 검증) 
-여기서는 기존 로직으로 돌면서 Queue로 받은 내역을 남겨보고 수기작업을 했던 내역과 대사하여 이상이 없는지 확인 한다.
+## WBS
 
