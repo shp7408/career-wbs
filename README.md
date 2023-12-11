@@ -271,7 +271,6 @@ namespace 재처리 {
     Payment --> PaymentTiemoutListner : Timeout Event
     PaymentTiemoutListner --> PaymentMethod : cancel 처리
 
-
 ```
     
 
