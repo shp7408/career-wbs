@@ -254,7 +254,7 @@ classDiagram
    Payment --> PaymentMethod : 결제요청
    Cancel --> PaymentMethod : 취소요청
 
-namespace 재처리 {
+
    class PaymentTiemoutListner {
         +beforeCancelForTimeout()
         -checkLimitRetryCount()
@@ -266,7 +266,7 @@ namespace 재처리 {
    class timeoutResultNotification {
         sendNotification()
    }
-}
+
 
     PaymentTiemoutListner "1" -- "1" Payment : 원결제확인
     Payment --> PaymentTiemoutListner : Timeout Event
