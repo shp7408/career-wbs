@@ -356,6 +356,8 @@ payTimeoutRetryHistories ||--o{ Retry-Process : dohistories
 
 ## WBS
 
+- 산정 기준 : 2시간/일
+
 1. 요구사항 분석 : 이미수행
 2. 설계 : 3d
 3. 일정산정: 1d
