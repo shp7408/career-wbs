@@ -5,7 +5,9 @@
 
 1. Base Entity 설계 및 적용 [[클릭](https://github.com/shp7408/career-wbs/blob/main/WBS-shp7408-01.md)] 
 
-2. 3 Layered Architecture 리팩토링 [[클릭](https://github.com/shp7408/career-wbs/blob/main/WBS-shp7408-02.md)] 
+2. 3 Layered Architecture 리팩토링 [[클릭](https://github.com/shp7408/career-wbs/blob/main/WBS-shp7408-02.md)]
+
+<hr>
 
 > mermaid로 작성된 과제는 마크다운 파일(WBS.md)로 올려주시면 됩니다. (md 파일 내에 기존 구조를 넣어주세요) <br>
 > 별도 아키택쳐나 모델링 도구를 사용한 경우에는 마크다운 파일(WBS.md)과 png, gif, jpg, pdf 파일 형식으로 WBS-{gitID}.png 파일명으로 upload 해주세요
